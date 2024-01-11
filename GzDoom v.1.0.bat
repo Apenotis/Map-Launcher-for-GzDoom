@@ -59,8 +59,6 @@ ECHO   83 - Pirates
 ECHO   84 - Infinite
 ECHO.
 
-:LOOP
-
 SET /P M=choose your map :
 
 rem ID start
@@ -520,8 +518,8 @@ IF /I "%useMod%"=="y" (
 
 rem Clear Memory
 set "core="
-set "map="
 set "mapname="
+set "map="
 set "file1="
 set "file2="
 set "file3="
