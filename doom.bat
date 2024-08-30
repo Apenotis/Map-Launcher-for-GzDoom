@@ -35,7 +35,7 @@ ECHO 13 - Final Doom TnT                                                63 - FBK
 ECHO 14 - Strange Aeons                                                 64 - 1000 Lines 2                              114 - Stardate 20x6
 ECHO 15 - Valiant (noMod)                                               65 - 1000 Lines                                115 - The Ultimate Torment and Torture
 ECHO 16 - Sunlust                                                       66 - RAY MOHAWK 2                              116 - NOVA II: New Dawn
-ECHO 17 - Back to Saturn Episode 1: Get out of my Stations              67 - TNT Goes Boom!                            117 - Impossible: A New Reality
+ECHO 17 - Back to Saturn Episode 1: Get out of my Stations              67 - TNT Goes Boom                             117 - Impossible: A New Reality
 ECHO 18 - Back to Saturn Episode 2: Tower in the Fountain of Sparks     68 - Deus Vult                                 118 - Songs of the Damned
 ECHO 19 - Death Project                                                 69 - Community Chest 2                         119 - UAC Ultra (v1.2)
 ECHO 20 - Simplistic Evil                                               70 - NUTS                                      120 - No End in Sight
