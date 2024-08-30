@@ -40,7 +40,7 @@ ECHO 18 - Back to Saturn Episode 2: Tower in the Fountain of Sparks     68 - Deu
 ECHO 19 - Death Project                                                 69 - Community Chest 2                         119 - UAC Ultra (v1.2)
 ECHO 20 - Simplistic Evil                                               70 - NUTS                                      120 - No End in Sight
 ECHO 21 - Hell Revealed 1                                               71 - Void                                      121 - Disturbia
-ECHO 22 - Hell Revealed 2                                               72 - The Sky May Be                            122 - Sunder
+ECHO 22 - Hell Revealed 2                                               72 - The Sky May Be
 ECHO 23 - e1m1 Reloaded                                                 73 - Speed of Doom
 ECHO 24 - Doom                                                          74 - Eternal of Doom
 ECHO 25 - Doom 2                                                        75 - Thunderpeak
