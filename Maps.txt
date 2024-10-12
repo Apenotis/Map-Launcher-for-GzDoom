@@ -20,31 +20,31 @@
 20 - Simplistic Evil                                               70 - NUTS                                      120 - No End in Sight
 21 - Hell Revealed 1                                               71 - Void                                      121 - Disturbia
 22 - Hell Revealed 2                                               72 - The Sky May Be                            122 - Sunder
-23 - e1m1 Reloaded                                                 73 - Speed of Doom
+23 - e1m1 Reloaded                                                 73 - Speed of Doom                             123 - Doom 64 (NoMod)
 24 - Doom                                                          74 - Eternal of Doom
 25 - Doom 2                                                        75 - Thunderpeak
 26 - Eternally                                                     76 - Comatose
-27 - Hell on Earth                                                 77 - Eternal Doom IV: Return from Oblivion 
-28 - Eviltech: Soul of a Megawad                                   78 - The Adventure of Square (NoMod)
-29 - 1994 Tune-up Community Project                                79 - Scythe 2
-30 - A Doom Odyssey 10th Anniversary Edition                       80 - Wolfenstein 3D (NoMod)
-31 - ConC.E.R.Ned                                                  81 - Prodoomer v2
-32 - Dark 7                                                        82 - Final NeoDoom (NoMod)
-33 - DemonFear                                                     83 - Pirates (NoMod)
-34 - Alien Vendetta                                                84 - Infinite (NoMod)
-35 - Armadosia                                                     85 - Hexen (NoMod)
-36 - Cleimos 2                                                     86 - Hexen Deathkings (NoMod)
-37 - Dimensions of Time                                            87 - Heretic (NoMod)
+27 - Hell on Earth (Brutal Doom Map)                               77 - Eternal Doom IV: Return from Oblivion 	  H1  - Heretic - Faithless
+28 - Eviltech: Soul of a Megawad                                   78 - The Adventure of Square (NoMod)           H2  - Heretic - Wayfarer
+29 - 1994 Tune-up Community Project                                79 - Scythe 2                                  H3  - Heretic - Sold Soul
+30 - A Doom Odyssey 10th Anniversary Edition                       80 - Wolfenstein 3D (NoMod)                    H4  - Heretic - Call of the Apostate
+31 - ConC.E.R.Ned                                                  81 - Prodoomer v2                              H5  - Heretic - Quest for the Crystal Skulls
+32 - Dark 7                                                        82 - Final NeoDoom (NoMod)                     H6  - Heretic - Dungeons and monsters
+33 - DemonFear                                                     83 - Pirates (NoMod)                           H7  - Heretic - HYMN: A Heretic Community Project
+34 - Alien Vendetta                                                84 - Infinite (NoMod)                          H8  - Heretic - Sitnalta
+35 - Armadosia                                                     85 - Hexen (NoMod)                             H9  - Heretic - Treasure Chest
+36 - Cleimos 2                                                     86 - Hexen Deathkings (NoMod)                  H10 - Heretic - Blasphemous Experiments
+37 - Dimensions of Time                                            87 - Heretic (NoMod)                           H11 - Heretic - Master of Chaos
 38 - Caverns of Darkness                                           88 - Urban Brawl: Action DooM 2 (NoMod)
 39 - Ni'mRoD - IXNAY on the HOMBRE (NoMod)                         89 - Kama Sutra
-40 - CH Retro Episode                                              90 - The Given
-41 - Doom 2 Reload                                                 91 - Equinox (NoMod)
-42 - Epic 2 (NoMod)                                                92 - Scythe
-43 - H2H-Xmas                                                      93 - Knee-Deep in ZDoom
-44 - Icarus: Alien Vanguard                                        94 - Deus Vult 2
-45 - Plutonia: Revisited Community Project                         95 - Sacrament
-46 - Plutonia 2                                                    96 - ZDoom Community Map Project II
-47 - The Darkening                                                 97 - Counterattack
-48 - The Darkening 2                                               98 - Resurgence
-49 - Whispers of Satan                                             99 - Putrefier
-50 - No Sleep for the Dead                                        100 - Hell Ground
+40 - CH Retro Episode                                              90 - The Given                                 HX1 - Hexen - Shadows of Chronos
+41 - Doom 2 Reload                                                 91 - Equinox (NoMod)                           HX2 - Hexen - Cyrgoth's Revenge
+42 - Epic 2 (NoMod)                                                92 - Scythe                                    HX3 - Hexen - Afterlands
+43 - H2H-Xmas                                                      93 - Knee-Deep in ZDoom                        HX4 - Hexen - 4 Weeks of Pain
+44 - Icarus: Alien Vanguard                                        94 - Deus Vult 2                               HX5 - Hexen - Penumbra
+45 - Plutonia: Revisited Community Project                         95 - Sacrament                                 HX6 - Hexen - Tower of Chaos
+46 - Plutonia 2                                                    96 - ZDoom Community Map Project II            HX7 - Hexen - A new World
+47 - The Darkening                                                 97 - Counterattack                             HX8 - Hexen - Descent Into the Abyss
+48 - The Darkening 2                                               98 - Resurgence                                HX9 - Hexen - Shades of Darkness
+49 - Whispers of Satan                                             99 - Putrefier                                HX10 - Hexen - Scourge of Viscerus
+50 - No Sleep for the Dead                                        100 - Hell Ground                              HX11 - Hexen - Realms of Cronos
