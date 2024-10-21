@@ -7,17 +7,10 @@ setlocal enabledelayedexpansion
 SET "gz=Engine\GzDoom\gzdoom.exe"
 SET "iwadPath=Maps\iwad\"
 SET "pwadPath=Maps\pwad\"
-
 SET "PBD=Maps\Mod\PB-0_1_0-alpha.pk3"
 SET "DARK=Maps\Mod\Dark\BDBE_v3.38.pk3 Maps\Mod\Dark\CatsVisorBASE1.10.3.pk3 Maps\Mod\Dark\CatsVisorC1.10.3.pk3"
 SET "Hexen=Maps\Mod\hexen\BrutalHexenRPG_V7.5.pk3"
 SET "Heretic=Maps\Mod\BrutalHereticRPG_V6.1.pk3"
-
-set count=0
-for /f "skip=1 tokens=1-12 delims=," %%a in (maps.csv) do (
-    set /a count+=1
-    set "map[%%a]=%%b,%%c,%%d,%%e,%%f,%%g,%%h,%%i,%%j,%%k"
-)
 
 :menu
 COLOR C
@@ -29,6 +22,12 @@ echo.
 
 set /P "M=Wähle eine Karte: "
 cls
+
+set count=0
+for /f "skip=1 tokens=1-12 delims=," %%a in (maps.csv) do (
+    set /a count+=1
+    set "map[%%a]=%%b,%%c,%%d,%%e,%%f,%%g,%%h,%%i,%%j,%%k"
+)
 
 IF "%M%"=="0" exit /B
 IF "%M%"=="r" GOTO menu
@@ -49,26 +48,31 @@ for /f "tokens=1-12 delims=," %%a in ("!map[%M%]!") do (
         set "displayCore=Heretic - Shadow of the Serpent Riders"
     )
           
-    set "mapname=%%b"
-    set "map1=%pwadPath%%%c"
-    set "map2=%pwadPath%%%d"
-    set "map3=%pwadPath%%%e"
-    set "map4=%pwadPath%%%f"
-    set "map5=%pwadPath%%%g"
-    set "map6=%pwadPath%%%h"
-    set "map7=%pwadPath%%%i"
-    set "map8=%pwadPath%%%j"
-    set "map9=%pwadPath%%%k"
+    if not "%%c"=="" set "map1=%pwadPath%%%c"
+    if not "%%d"=="" set "map2=%pwadPath%%%d"
+    if not "%%e"=="" set "map3=%pwadPath%%%e"
+    if not "%%f"=="" set "map4=%pwadPath%%%f"
+    if not "%%g"=="" set "map5=%pwadPath%%%g"
+    if not "%%h"=="" set "map6=%pwadPath%%%h"
+    if not "%%i"=="" set "map7=%pwadPath%%%i"
+    if not "%%j"=="" set "map8=%pwadPath%%%j"
+    if not "%%k"=="" set "map9=%pwadPath%%%k"
 )
 
-set "fileParams="
-set "displayFileParams="
-for %%i in (%map1% %map2% %map3% %map4% %map5% %map6% %map7% %map8% %map9%) do (
-    if "%%i" neq "%pwadPath%-" (
-        set "fileParams=!fileParams! -file %%i"
+sset "fileParams="
+set "firstPWAD=true"
+for %%i in ("%map1%" "%map2%" "%map3%" "%map4%" "%map5%" "%map6%" "%map7%" "%map8%" "%map9%") do (
+    if not "%%~i"=="" (
+        if defined firstPWAD (
+            set "fileParams=-file %%~i"
+            set "firstPWAD="
+        ) else (
+            set "fileParams=!fileParams! %%~i"
+        )
         set "displayFileParams=!displayFileParams! %%~ni"
     )
 )
+
 
 COLOR A
 CLS
