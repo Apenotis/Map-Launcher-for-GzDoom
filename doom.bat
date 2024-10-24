@@ -5,8 +5,6 @@ chcp 65001 >nul
 setlocal enabledelayedexpansion
 
 SET "gz=Engine\GzDoom\gzdoom.exe"
-SET "iwadPath=Maps\iwad\"
-SET "pwadPath=Maps\pwad\"
 SET "PBD=Maps\Mod\PB-0_1_0-alpha.pk3"
 SET "DARK=Maps\Mod\Dark\BDBE_v3.38.pk3 Maps\Mod\Dark\CatsVisorBASE1.10.3.pk3 Maps\Mod\Dark\CatsVisorC1.10.3.pk3"
 SET "Hexen=Maps\Mod\hexen\BrutalHexenRPG_V7.5.pk3"
@@ -23,31 +21,33 @@ echo.
 set /P "M=Wähle eine Karte: "
 cls
 
-set count=0
 for /f "skip=1 tokens=1-12 delims=," %%a in (maps.csv) do (
-    set /a count+=1
-    set "map[%%a]=%%b,%%c,%%d,%%e,%%f,%%g,%%h,%%i,%%j,%%k"
+    set "map[%%a]=%%b,%%c,%%d,%%e,%%f,%%g,%%h,%%i,%%j,%%k,%%l"
 )
 
 IF "%M%"=="0" exit /B
 IF "%M%"=="r" GOTO menu
 if "%M%"=="" goto menu
-
 if not defined map[%M%] goto menu
 
+set "fileParams="
+set "parameters="
+
 for /f "tokens=1-12 delims=," %%a in ("!map[%M%]!") do (
-    set "core=%iwadPath%%%a"
+    set "core=%%a"
     
-    if "%%a"=="doom.wad" (
+    if "%%a"=="maps\iwad\doom.wad" (
         set "displayCore=Doom I"
-    ) else if "%%a"=="doom2.wad" (
+    ) else if "%%a"=="maps\iwad\doom2.wad" (
         set "displayCore=Doom II"    
-    ) else if "%%a"=="hexen.wad" (
+    ) else if "%%a"=="maps\iwad\hexen.wad" (
         set "displayCore=Hexen - Beyond Heretic"
-    ) else if "%%a"=="heretic.wad" (
+    ) else if "%%a"=="maps\iwad\heretic.wad" (
         set "displayCore=Heretic - Shadow of the Serpent Riders"
     )
-          
+     
+    set "mapname=%%b"
+
     if not "%%c"=="" set "map1=%pwadPath%%%c"
     if not "%%d"=="" set "map2=%pwadPath%%%d"
     if not "%%e"=="" set "map3=%pwadPath%%%e"
@@ -59,12 +59,12 @@ for /f "tokens=1-12 delims=," %%a in ("!map[%M%]!") do (
     if not "%%k"=="" set "map9=%pwadPath%%%k"
 )
 
-sset "fileParams="
+set "fileParams="
 set "firstPWAD=true"
 for %%i in ("%map1%" "%map2%" "%map3%" "%map4%" "%map5%" "%map6%" "%map7%" "%map8%" "%map9%") do (
     if not "%%~i"=="" (
         if defined firstPWAD (
-            set "fileParams=-file %%~i"
+            set "fileParams=%%~i"
             set "firstPWAD="
         ) else (
             set "fileParams=!fileParams! %%~i"
@@ -72,7 +72,6 @@ for %%i in ("%map1%" "%map2%" "%map3%" "%map4%" "%map5%" "%map6%" "%map7%" "%map
         set "displayFileParams=!displayFileParams! %%~ni"
     )
 )
-
 
 COLOR A
 CLS
@@ -106,6 +105,7 @@ timeout /t 1 >nul
 echo Map:  %mapname%
 echo Iwad: %displayCore%
 echo Pwad:%displayFileParams%
+echo Pfadvalidierung: "%gz%" +logfile "logfile.txt" -iwad "%core%" -file !fileParams!
 
 if "%modChoice%"=="1" (
     echo Mod:  Project Brutality
@@ -121,9 +121,18 @@ if "%modChoice%"=="1" (
     "%gz%" +logfile "logfile.txt" -iwad "%core%" -file %HERETIC% !fileParams!
 ) else if "%modChoice%"=="5" (
     echo Mod:  Kein Mod ausgewählt
-    "%gz%" +logfile "logfile.txt" -iwad "%core%" -file !fileParams!
+    "%gz%" +logfile "logfile.txt" -iwad "%core%" -file !fileParams! !parameters!
 )
    
+for /L %%i in (1,1,9) do (
+    set "map%%i="
+)
+set "fileParams="
+set "displayFileParams="
+set "parameters="
+set "core="
+set "mapname="
+set "displayCore="
 
 pause
 goto menu
