@@ -105,7 +105,7 @@ timeout /t 1 >nul
 echo Map:  %mapname%
 echo Iwad: %displayCore%
 echo Pwad:%displayFileParams%
-echo Pfadvalidierung: "%gz%" +logfile "logfile.txt" -iwad "%core%" -file !fileParams!
+rem echo Pfadvalidierung: "%gz%" +logfile "logfile.txt" -iwad "%core%" -file !fileParams!
 
 if "%modChoice%"=="1" (
     echo Mod:  Project Brutality
@@ -121,7 +121,7 @@ if "%modChoice%"=="1" (
     "%gz%" +logfile "logfile.txt" -iwad "%core%" -file %HERETIC% !fileParams!
 ) else if "%modChoice%"=="5" (
     echo Mod:  Kein Mod ausgewählt
-    "%gz%" +logfile "logfile.txt" -iwad "%core%" -file !fileParams! !parameters!
+    "%gz%" +logfile "logfile.txt" -iwad "%core%" -file !fileParams!
 )
    
 for /L %%i in (1,1,9) do (
