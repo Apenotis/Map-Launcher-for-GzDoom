@@ -39,7 +39,11 @@ for /f "tokens=1-12 delims=," %%a in ("!map[%M%]!") do (
     if "%%a"=="maps\iwad\doom.wad" (
         set "displayCore=Doom I"
     ) else if "%%a"=="maps\iwad\doom2.wad" (
-        set "displayCore=Doom II"    
+        set "displayCore=Doom II"
+    ) else if "%%a"=="maps\iwad\Plutonia.wad" (
+        set "displayCore=Final Doom Plutonia"
+    ) else if "%%a"=="maps\iwad\tnt.wad" (
+        set "displayCore=Final Doom TnT-Evilution"
     ) else if "%%a"=="maps\iwad\hexen.wad" (
         set "displayCore=Hexen - Beyond Heretic"
     ) else if "%%a"=="maps\iwad\heretic.wad" (
@@ -57,6 +61,7 @@ for /f "tokens=1-12 delims=," %%a in ("!map[%M%]!") do (
     if not "%%i"=="" set "map7=%pwadPath%%%i"
     if not "%%j"=="" set "map8=%pwadPath%%%j"
     if not "%%k"=="" set "map9=%pwadPath%%%k"
+    if not "%%k"=="" set "map9=%pwadPath%%%l"
 )
 
 set "fileParams="
@@ -69,7 +74,7 @@ for %%i in ("%map1%" "%map2%" "%map3%" "%map4%" "%map5%" "%map6%" "%map7%" "%map
         ) else (
             set "fileParams=!fileParams! %%~i"
         )
-        set "displayFileParams=!displayFileParams! %%~ni"
+        set "displayFileParams=!displayFileParams! %%~nxi"
     )
 )
 
@@ -83,6 +88,16 @@ if "%displayCore%"=="Doom I" (
     echo 5 - Kein Mod
     set "validChoices=1 2 5"
 ) else if "%displayCore%"=="Doom II" (
+    echo 1 - Project Brutality
+    echo 2 - Dark
+    echo 5 - Kein Mod
+    set "validChoices=1 2 5"
+) else if "%displayCore%"=="Final Doom Plutonia" (
+    echo 1 - Project Brutality
+    echo 2 - Dark
+    echo 5 - Kein Mod
+    set "validChoices=1 2 5"
+) else if "%displayCore%"=="Final Doom TnT-Evilution" (
     echo 1 - Project Brutality
     echo 2 - Dark
     echo 5 - Kein Mod
